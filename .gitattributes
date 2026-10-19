@@ -1,0 +1,10 @@
+* text=auto eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.c text eol=lf
+*.h text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+hillclimbracing/hcr binary
+hillclimbracing/hcr-tls-patcher binary

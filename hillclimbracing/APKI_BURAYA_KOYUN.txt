@@ -1,0 +1,8 @@
+UYUMLU APK DOSYASINI BU KLASORE hcr.apk ADIYLA KOPYALAYIN.
+
+Desteklenen oyun verisi:
+Fingersoft Hill Climb Racing 1.67.0
+SHA-256: 542c25e56ac80768d4a9f74bd77ef463deb4517623df886ee0602315107b150a
+
+Port APK indirmez ve APK'yi dagitmaz. Ilk calistirmada dosya dogrulanir,
+gerekli varliklar cikartilir ve R36S/ArkOS uyumluluk duzeltmesi uygulanir.

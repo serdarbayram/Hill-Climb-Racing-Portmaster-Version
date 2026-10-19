@@ -1,0 +1,35 @@
+# Proprietary, user-supplied game data
+game/assets/
+game/hcr.apk
+game/libgame.so
+game/save/
+game/*.bin
+game/*.bak
+game/UserDefault.xml
+game/*event*
+game/*mission*
+
+# Generated files
+build/
+build-arm64/
+build-compatible/
+build-headers/
+release/
+test-run-output/
+tools/_analysis_deps/
+__pycache__/
+*.pyc
+*.log
+.hcr-installed
+.install-tmp/
+
+# Local analysis notes
+ANALYSIS_TR.md
+
+# Local development workspace (not part of the public install-only repository)
+/CMakeLists.txt
+/build.sh
+/LICENSE.HCR_NX
+/src/
+/tools/
+/game/

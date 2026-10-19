@@ -1,0 +1,22 @@
+{
+  "version": 4,
+  "name": "hillclimbracing.zip",
+  "items": ["HillClimbRacing.sh", "hillclimbracing"],
+  "items_opt": [],
+  "attr": {
+    "title": "Hill Climb Racing",
+    "porter": ["super"],
+    "desc": "Hill Climb Racing Android running through an ARM64 Linux compatibility loader. Bring your own APK.",
+    "inst": "Copy your legally obtained, compatible Hill Climb Racing APK into ports/hillclimbracing/ as hcr.apk. The first launch verifies and prepares it automatically.",
+    "genres": ["racing", "arcade"],
+    "image": {},
+    "rtr": false,
+    "runtime": null,
+    "reqs": [],
+    "arch": ["aarch64"],
+    "desc_md": null,
+    "inst_md": null,
+    "exp": true,
+    "min_glibc": "2.29"
+  }
+}
