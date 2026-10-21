@@ -64,7 +64,7 @@ show_error() {
 }
 
 prepare_apk() {
-  expected="542c25e56ac80768d4a9f74bd77ef463deb4517623df886ee0602315107b150a"
+  expected_libgame="f60493136c0fa8d1f905d29493b3077b3acd89338db315015b3b0bfcfc23dae5"
   apk=""
   if [ -f "$GAMEDIR/hcr.apk" ]; then
     apk="$GAMEDIR/hcr.apk"
@@ -82,15 +82,10 @@ prepare_apk() {
     return 1
   fi
   if ! command -v sha256sum >/dev/null 2>&1; then
-    show_error "Bu sistemde sha256sum bulunamadi; APK guvenli bicimde dogrulanamiyor."
+    show_error "Bu sistemde sha256sum bulunamadi; oyun kutuphanesi guvenli bicimde dogrulanamiyor."
     return 1
   fi
 
-  actual=$(sha256sum "$apk" | awk '{print $1}')
-  if [ "$actual" != "$expected" ]; then
-    show_error "Uyumsuz APK. Gereken surum: Fingersoft Hill Climb Racing 1.67.0, SHA-256: $expected"
-    return 1
-  fi
   if command -v unzip >/dev/null 2>&1; then
     unzip_cmd="unzip"
   elif command -v busybox >/dev/null 2>&1 && busybox unzip 2>&1 | grep -qi unzip; then
@@ -118,6 +113,13 @@ prepare_apk() {
     show_error "APK gerekli ARM64 oyun dosyalarini icermiyor."
     return 1
   fi
+  actual_libgame=$(sha256sum "$tmp/lib/arm64-v8a/libgame.so" | awk '{print $1}')
+  if [ "$actual_libgame" != "$expected_libgame" ]; then
+    rm -rf "$tmp"
+    show_error "Uyumsuz veya degistirilmis APK. Standart Hill Climb Racing 1.67.0 ARM64 APK kullanin."
+    return 1
+  fi
+  echo "Compatible Hill Climb Racing 1.67.0 game library verified."
   if ! ${HCR_PATCHER_RUNNER:-} "$GAMEDIR/hcr-tls-patcher" "$tmp/lib/arm64-v8a/libgame.so"; then
     rm -rf "$tmp"
     show_error "APK kutuphanesine ArkOS uyumluluk duzeltmesi uygulanamadi."

@@ -2,7 +2,10 @@ UYUMLU APK DOSYASINI BU KLASORE hcr.apk ADIYLA KOPYALAYIN.
 
 Desteklenen oyun verisi:
 Fingersoft Hill Climb Racing 1.67.0
-SHA-256: 542c25e56ac80768d4a9f74bd77ef463deb4517623df886ee0602315107b150a
+
+APK dosyasinin adi, imzasi ve SHA-256 degeri farkli olabilir. Standart tek
+parca APK icinde uyumlu ARM64 oyun kutuphanesi bulunmasi yeterlidir.
+XAPK, APKM ve split APK paketleri desteklenmez.
 
 Port APK indirmez ve APK'yi dagitmaz. Ilk calistirmada dosya dogrulanir,
 gerekli varliklar cikartilir ve R36S/ArkOS uyumluluk duzeltmesi uygulanir.

@@ -12,12 +12,10 @@ an Android emulator and does not reimplement the game.
 
 - A 64-bit ARM PortMaster device with OpenGL ES 2, currently tested on R36S.
 - A legally obtained standalone APK matching Hill Climb Racing 1.67.0.
-- APK SHA-256:
-  `542c25e56ac80768d4a9f74bd77ef463deb4517623df886ee0602315107b150a`
 
-An APK with another hash is rejected. A file renamed by a distributor may show
-a different filename; the SHA-256 above and the internal ARM64 library are what
-the installer checks.
+The APK filename, signature and whole-file SHA-256 may vary. The installer
+accepts differently packaged standalone APKs when they contain the compatible
+1.67.0 ARM64 game library. Split APK, XAPK and APKM bundles are not supported.
 
 ## Install
 
@@ -29,8 +27,9 @@ the installer checks.
    `ports/hillclimbracing/hcr.apk`
 4. Launch **Hill Climb Racing** from the Ports menu.
 
-On first launch the port verifies the APK, extracts its `assets/` and ARM64
-`libgame.so`, and applies the version-pinned ArkOS/glibc TLS compatibility fix.
+On first launch the port extracts the APK's `assets/` and ARM64 `libgame.so`,
+verifies the internal game library, and applies the version-pinned ArkOS/glibc
+TLS compatibility fix.
 The original APK remains in the folder because the Cocos2d-x asset manager
 uses its index while the game is running. First setup needs roughly 250 MB of
 free space in addition to the installed port.
