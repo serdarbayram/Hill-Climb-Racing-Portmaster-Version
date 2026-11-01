@@ -4,9 +4,25 @@ An ARM64 Linux compatibility-loader port of Fingersoft's original Android
 game for R36S-class handhelds. It runs the game's own native library; it is not
 an Android emulator and does not reimplement the game.
 
+Ready-to-install packages are available for **ArkOS / dArkOS**, **muOS**, and
+**NextUI on the TrimUI Brick**.
+
 > Bring your own game. The repository and public release contain no APK,
 > extracted game assets, or Fingersoft native libraries. Nothing is downloaded
 > automatically.
+
+## Supported Systems
+
+- **ArkOS / dArkOS:** use `hillclimbracing.zip`. Tested on R36S and
+  community-tested on R36S Ultra.
+- **muOS:** use `HillClimbRacing.MuOS.zip`.
+- **NextUI on TrimUI Brick:** use
+  `HillClimbRacing-TrimUI-Brick-NextUI.zip`. This adaptation was created by
+  **Çağlar Ersöz**.
+
+Download the package for your system from the
+[GitHub Releases](https://github.com/serdarbayram/Hill-Climb-Racing-Portmaster-Version/releases)
+page.
 
 ## Requirements
 
